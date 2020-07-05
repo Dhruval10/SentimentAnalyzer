@@ -26,3 +26,13 @@ class FileOperations():
         tweets = file.read().lower().split('\n')
         file.close()
         return tweets
+
+    def remove_blines(self):
+        """
+        Remove all blank lines from file
+
+        Return:
+        """
+        with open(self._file_name) as in_file, open(self._file_name, 'r+') as out_file:
+            out_file.writelines(line for line in in_file if line.strip())
+            out_file.truncate()

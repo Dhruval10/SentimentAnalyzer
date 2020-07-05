@@ -17,6 +17,7 @@ def main():
     processed_tweets = parser.process_all_tweets(tweets=tweets)
     new_tweet_file = file_work.FileOperations('New_tweets.txt')
     new_tweet_file.write(processed_tweets)
+    new_tweet_file.remove_blines()
     parser.remove_stopwords()
     # nfile = file_work.FileOperations('nwords.txt')
     # pfile = file_work.FileOperations('pwords.txt')

@@ -12,7 +12,7 @@ class TweetParser(object):
     def __init__(self):
         self.initializer = None
 
-    def set_tweet_criteria(self, since_date='2019-10-01', until_date='2020-07-01', handle=None, max_tweets=20):
+    def set_tweet_criteria(self, since_date='2019-10-01', until_date='2020-07-01', handle=None, max_tweets=4000):
         """This function will return all the tweets for specified handle between since_date and until_date.
 
         Args:
