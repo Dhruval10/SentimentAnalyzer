@@ -12,7 +12,7 @@ class TweetParser(object):
     def __init__(self):
         self.initializer = None
 
-    def set_tweet_criteria(self, since_date='2019-10-01', until_date='2020-07-01', handle=None, max_tweets=3):
+    def set_tweet_criteria(self, since_date='2019-10-01', until_date='2020-07-01', handle=None, max_tweets=20):
         """This function will return all the tweets for specified handle between since_date and until_date.
 
         Args:
@@ -56,8 +56,8 @@ class TweetParser(object):
     def clean_tweet(self, tweet):
         """TODO: Please specify function args here.
         """
-
-        return ' '.join(re.sub(r'(@[A-Za-z0-9]+) | ([^0-9A-Za-z \t]) |((www\.[^\s]+)|(http?://[^\s]+)| (https?://[^\s]+)|(.pic.[^\s]+))', "", tweet.text).split())
+        # return ' '.join(re.sub('(@[A-Za-z0-9]+)|([^0-9A-Za-z \t]) |(\w+:\/\/\S+)| ((www\.[^\s]+) |(http?://[^\s]+)|(https?://[^\s]+)|(.pic.[^\s]+))', ' ', tweet.text).split())
+        return ' '.join(re.sub(r'(@[A-Za-z0-9]+) | ([^0-9A-Za-z \t]) |(pic.twitter\.[^\s]+)|((www\.[^\s]+) |(http?://[^\s]+) |(https?://[^\s]+)|(.pic.[^\s]+))', ' ', tweet.text).split())
 
     def remove_stopwords(self):
         """TODO: enter comment and args here."""

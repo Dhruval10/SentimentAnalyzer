@@ -3,7 +3,7 @@ import tweet_parser
 import file_work
 import logging
 
-handle = 'JoeBiden'
+handle = 'realDonaldTrump'
 
 
 def main():
