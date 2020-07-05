@@ -13,7 +13,7 @@ class FileOperations():
         """
         file = open(self._file_name, 'w')
         for test_string in text_to_write:
-            file.write(test_string+'\n')
+            file.writelines(test_string.lower()+'\n')
         file.close()
 
     def read(self):

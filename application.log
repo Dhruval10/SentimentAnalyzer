@@ -1,244 +1,213 @@
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:52} INFO Thank you @ Booker4KY for running an inspiring campaign to fight for progressive issues and uplift the working people of Kentucky and the entire country. We look forward to seeing you lead the struggle for justice for years to come.https://twitter.com/Booker4KY/status/1278090355561443330 …
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:52} INFO Congress must ensure that the treatment and the vaccine for coronavirus are free to all Americans. You should not have to go into debt to survive a pandemic.
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:52} INFO Colorado, today is Election Day! Be sure to return your ballot by 7 p.m. today and vote for DA candidates @ alonzopayneCO and @ ap4ag. Find out more info about returning your ballot here: http://bernie.to/co-vote .pic.twitter.com/vxTrXL233u
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:52} INFO More Americans have died from the coronavirus than were killed fighting in World War I. Tens of millions have lost their jobs and are in danger of eviction. Now is the time to invest in jobs, education, housing and health care here at home, not a $740 billion defense budget.
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:66} INFO ['a', 'able', 'about', 'above', 'we', "we'd", 'according', 'accordingly', 'across', 'actually', 'after', 'afterwards', 'again', 'against', "ain't", 'all', 'allow', 'allows', 'almost', 'alone', 'along', 'already', 'also', 'although', 'always', 'am', 'among', 'amongst', 'an', 'and', 'another', 'any', 'anybody', 'anyhow', 'anyone', 'anything', 'anyway', 'anyways', 'anywhere', 'apart', 'appear', 'appreciate', 'appropriate', 'are', "aren't", 'around', 'as', "a's", 'aside', 'ask', 'asking', 'associated', 'at', 'available', 'away', 'awfully', 'be', 'became', 'because', 'become', 'becomes', 'becoming', 'been', 'before', 'beforehand', 'behind', 'being', 'believe', 'below', 'beside', 'besides', 'best', 'better', 'between', 'beyond', 'both', 'brief', 'but', 'by', 'came', 'can', 'cannot', 'cant', "can't", 'cause', 'causes', 'certain', 'certainly', 'changes', 'clearly', "c'mon", 'co', 'com', 'come', 'comes', 'concerning', 'consequently', 'consider', 'considering', 'contain', 'containing', 'contains', 'corresponding', 'could', "couldn't", 'course', "c's", 'currently', 'definitely', 'described', 'despite', 'did', "didn't", 'different', 'do', 'does', "doesn't", 'doing', 'don', 'done', "don't", 'down', 'downwards', 'during', 'each', 'edu', 'eg', 'eight', 'either', 'else', 'elsewhere', 'enough', 'entirely', 'especially', 'et', 'etc', 'even', 'ever', 'every', 'everybody', 'everyone', 'everything', 'everywhere', 'ex', 'exactly', 'example', 'except', 'far', 'few', 'fifth', 'first', 'five', 'followed', 'following', 'follows', 'for', 'former', 'formerly', 'forth', 'four', 'from', 'further', 'furthermore', 'get', 'gets', 'getting', 'given', 'gives', 'go', 'goes', 'going', 'gone', 'got', 'gotten', 'greetings', 'had', "hadn't", 'happens', 'hardly', 'has', "hasn't", 'have', "haven't", 'having', 'he', "he'd", "he'll", 'hello', 'help', 'hence', 'her', 'here', 'hereafter', 'hereby', 'herein', "here's", 'hereupon', 'hers', 'herself', "he's", 'hi', 'him', 'himself', 'his', 'hither', 'hopefully', 'how', 'howbeit', 'however', "how's", 'i', "i'd", 'ie', 'if', 'ignored', "i'll", "i'm", 'immediate', 'in', 'inasmuch', 'inc', 'indeed', 'indicate', 'indicated', 'indicates', 'inner', 'insofar', 'instead', 'into', 'inward', 'is', "isn't", 'it', "it'd", "it'll", 'its', "it's", 'itself', "i've", 'just', 'keep', 'keeps', 'kept', 'know', 'known', 'knows', 'last', 'lately', 'later', 'latter', 'latterly', 'least', 'less', 'lest', 'let', "let's", 'like', 'liked', 'likely', 'little', 'look', 'looking', 'looks', 'ltd', 'mainly', 'many', 'may', 'maybe', 'me', 'mean', 'meanwhile', 'merely', 'might', 'more', 'moreover', 'most', 'mostly', 'much', 'must', "mustn't", 'my', 'myself', 'name', 'namely', 'nd', 'near', 'nearly', 'necessary', 'need', 'needs', 'neither', 'never', 'nevertheless', 'new', 'next', 'nine', 'no', 'nobody', 'non', 'none', 'noone', 'nor', 'normally', 'not', 'nothing', 'novel', 'now', 'nowhere', 'obviously', 'of', 'off', 'often', 'oh', 'ok', 'okay', 'old', 'on', 'once', 'one', 'ones', 'only', 'onto', 'or', 'other', 'others', 'otherwise', 'ought', 'our', 'ours', 'ourselves', 'out', 'outside', 'over', 'overall', 'own', 'particular', 'particularly', 'per', 'perhaps', 'placed', 'please', 'plus', 'possible', 'presumably', 'probably', 'provides', 'que', 'quite', 'qv', 'rather', 'rd', 're', 'really', 'reasonably', 'regarding', 'regardless', 'regards', 'relatively', 'respectively', 'right', 's', 'said', 'same', 'saw', 'say', 'saying', 'says', 'second', 'secondly', 'see', 'seeing', 'seem', 'seemed', 'seeming', 'seems', 'seen', 'self', 'selves', 'sensible', 'sent', 'serious', 'seriously', 'seven', 'several', 'shall', "shan't", 'she', "she'd", "she'll", "she's", 'should', "shouldn't", 'since', 'six', 'so', 'some', 'somebody', 'somehow', 'someone', 'something', 'sometime', 'sometimes', 'somewhat', 'somewhere', 'soon', 'sorry', 'specified', 'specify', 'specifying', 'still', 'sub', 'such', 'sup', 'sure', 't', 'take', 'taken', 'tell', 'tends', 'th', 'than', 'thank', 'thanks', 'thanx', 'that', 'thats', "that's", 'the', 'their', 'theirs', 'them', 'themselves', 'then', 'thence', 'there', 'thereafter', 'thereby', 'therefore', 'therein', 'theres', "there's", 'thereupon', 'these', 'they', "they'd", "they'll", "they're", "they've", 'think', 'third', 'this', 'thorough', 'thoroughly', 'those', 'though', 'three', 'through', 'throughout', 'thru', 'thus', 'to', 'together', 'too', 'took', 'toward', 'towards', 'tried', 'tries', 'truly', 'try', 'trying', "t's", 'twice', 'two', 'un', 'under', 'unfortunately', 'unless', 'unlikely', 'until', 'unto', 'up', 'upon', 'us', 'use', 'used', 'useful', 'uses', 'using', 'usually', 'value', 'various', 'very', 'via', 'viz', 'vs', 'want', 'wants', 'was', "wasn't", 'way', 'welcome', 'well', "we'll", 'went', 'were', "we're", "weren't", "we've", 'what', 'whatever', "what's", 'when', 'whence', 'whenever', "when's", 'where', 'whereafter', 'whereas', 'whereby', 'wherein', "where's", 'whereupon', 'wherever', 'whether', 'which', 'while', 'whither', 'who', 'whoever', 'whole', 'whom', "who's", 'whose', 'why', "why's", 'will', 'willing', 'wish', 'with', 'within', 'without', 'wonder', "won't", 'would', "wouldn't", 'yes', 'yet', 'you', "you'd", "you'll", 'your', "you're", 'yours', 'yourself', 'yourselves', "you've", 'zero', '']
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:70} INFO ['thank you booker4ky for running an inspiring campaign to fight for progressive issues and uplift the working people of kentucky and the entire country we look forward to seeing you lead the struggle for justice for years to come. …', 'congress must ensure that the treatment and the vaccine for coronavirus are free to all americans you should not have to go into debt to survive a pandemic.', 'colorado today is election day be sure to return your ballot by 7 p.m today and vote for da candidates alonzopayneco and ap4ag find out more info about returning your ballot here', 'more americans have died from the coronavirus than were killed fighting in world war i tens of millions have lost their jobs and are in danger of eviction now is the time to invest in jobs education housing and health care here at home not a $740 billion defense budget.', '']
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:74} INFO thank you booker4ky for running an inspiring campaign to fight for progressive issues and uplift the working people of kentucky and the entire country we look forward to seeing you lead the struggle for justice for years to come. …
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:76} INFO ['thank', 'you', 'booker4ky', 'for', 'running', 'an', 'inspiring', 'campaign', 'to', 'fight', 'for', 'progressive', 'issues', 'and', 'uplift', 'the', 'working', 'people', 'of', 'kentucky', 'and', 'the', 'entire', 'country', 'we', 'look', 'forward', 'to', 'seeing', 'you', 'lead', 'the', 'struggle', 'for', 'justice', 'for', 'years', 'to', 'come.', '…']
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO thank
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO you
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO booker4ky
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO for
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO running
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO an
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO inspiring
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO campaign
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO to
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO fight
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO for
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO progressive
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO issues
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO and
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO uplift
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO the
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO working
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO people
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO of
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO kentucky
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO and
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO the
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO entire
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO country
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO we
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO look
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO forward
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO to
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO seeing
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO you
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO lead
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO the
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO struggle
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO for
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO justice
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO for
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO years
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO to
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO come.
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO …
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:83} INFO ['booker4ky', 'running', 'inspiring', 'campaign', 'fight', 'progressive', 'issues', 'uplift', 'working', 'people', 'kentucky', 'entire', 'country', 'forward', 'lead', 'struggle', 'justice', 'years', 'come.', '…']
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:74} INFO congress must ensure that the treatment and the vaccine for coronavirus are free to all americans you should not have to go into debt to survive a pandemic.
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:76} INFO ['congress', 'must', 'ensure', 'that', 'the', 'treatment', 'and', 'the', 'vaccine', 'for', 'coronavirus', 'are', 'free', 'to', 'all', 'americans', 'you', 'should', 'not', 'have', 'to', 'go', 'into', 'debt', 'to', 'survive', 'a', 'pandemic.']
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO congress
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO must
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO ensure
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO that
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO the
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO treatment
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO and
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO the
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO vaccine
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO for
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO coronavirus
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO are
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO free
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO to
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO all
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO americans
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO you
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO should
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO not
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO have
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO to
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO go
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO into
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO debt
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO to
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO survive
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO a
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO pandemic.
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:83} INFO ['congress', 'ensure', 'treatment', 'vaccine', 'coronavirus', 'free', 'americans', 'debt', 'survive', 'pandemic.']
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:74} INFO colorado today is election day be sure to return your ballot by 7 p.m today and vote for da candidates alonzopayneco and ap4ag find out more info about returning your ballot here
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:76} INFO ['colorado', 'today', 'is', 'election', 'day', 'be', 'sure', 'to', 'return', 'your', 'ballot', 'by', '7', 'p.m', 'today', 'and', 'vote', 'for', 'da', 'candidates', 'alonzopayneco', 'and', 'ap4ag', 'find', 'out', 'more', 'info', 'about', 'returning', 'your', 'ballot', 'here']
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO colorado
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO today
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO is
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO election
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO day
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO be
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO sure
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO to
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO return
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO your
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO ballot
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO by
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO 7
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO p.m
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO today
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO and
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO vote
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO for
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO da
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO candidates
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO alonzopayneco
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO and
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO ap4ag
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO find
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO out
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO more
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO info
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO about
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO returning
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO your
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO ballot
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO here
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:83} INFO ['colorado', 'today', 'election', 'day', 'return', 'ballot', '7', 'p.m', 'today', 'vote', 'da', 'candidates', 'alonzopayneco', 'ap4ag', 'find', 'info', 'returning', 'ballot']
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:74} INFO more americans have died from the coronavirus than were killed fighting in world war i tens of millions have lost their jobs and are in danger of eviction now is the time to invest in jobs education housing and health care here at home not a $740 billion defense budget.
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:76} INFO ['more', 'americans', 'have', 'died', 'from', 'the', 'coronavirus', 'than', 'were', 'killed', 'fighting', 'in', 'world', 'war', 'i', 'tens', 'of', 'millions', 'have', 'lost', 'their', 'jobs', 'and', 'are', 'in', 'danger', 'of', 'eviction', 'now', 'is', 'the', 'time', 'to', 'invest', 'in', 'jobs', 'education', 'housing', 'and', 'health', 'care', 'here', 'at', 'home', 'not', 'a', '$740', 'billion', 'defense', 'budget.']
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO more
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO americans
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO have
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO died
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO from
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO the
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO coronavirus
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO than
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO were
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO killed
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO fighting
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO in
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO world
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO war
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO i
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO tens
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO of
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO millions
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO have
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO lost
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO their
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO jobs
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO and
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO are
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO in
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO danger
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO of
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO eviction
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO now
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO is
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO the
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO time
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO to
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO invest
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO in
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO jobs
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO education
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO housing
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO and
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO health
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO care
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO here
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO at
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO home
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO not
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO a
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO $740
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO billion
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO defense
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:79} INFO budget.
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:81} INFO found match!!!
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:83} INFO ['americans', 'died', 'coronavirus', 'killed', 'fighting', 'world', 'war', 'tens', 'millions', 'lost', 'jobs', 'danger', 'eviction', 'time', 'invest', 'jobs', 'education', 'housing', 'health', 'care', 'home', '$740', 'billion', 'defense', 'budget.']
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:74} INFO 
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:76} INFO []
-07/02/2020 08:41:21 PM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:83} INFO []
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:52} INFO On the final day of # PrideMonth, here’s my promise to you: If I have the honor of being elected, I will be the most pro-equality president in our nation’s history. LGBTQ+ rights are human rights — and we can't rest until everyone is treated with dignity and respect under the law.
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:52} INFO We’re facing a serious threat — and we need to meet it together as one country. But this President gives us no direction and actively pits us against one another. We can't continue on like this.pic.twitter.com/LA8OJ86Nnk
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:52} INFO If I’m elected, I’ll immediately reach out to Dr. Fauci and ask him to continue his incredible service to our country. I’ll have the nation’s top medical experts and scientists ready to advise our response on day one — and I'll actually listen to them.
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:71} INFO ["on the final day ofpridemonth, here’s my promise to you: if i have the honor of being elected, i will be the most pro-equality president in our nation’s history. lgbtq+ rights are human rightsand we can't rest until everyone is treated with dignity and respect under the law.", "we’re facing a serious threatand we need to meet it together as one country. but this president gives us no direction and actively pits us against one another. we can't continue on like this", "if i’m elected, i’ll immediately reach out to dr. fauci and ask him to continue his incredible service to our country. i’ll have the nation’s top medical experts and scientists ready to advise our response on day oneand i'll actually listen to them.", '']
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:75} INFO on the final day ofpridemonth, here’s my promise to you: if i have the honor of being elected, i will be the most pro-equality president in our nation’s history. lgbtq+ rights are human rightsand we can't rest until everyone is treated with dignity and respect under the law.
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:77} INFO ['on', 'the', 'final', 'day', 'ofpridemonth,', 'here’s', 'my', 'promise', 'to', 'you:', 'if', 'i', 'have', 'the', 'honor', 'of', 'being', 'elected,', 'i', 'will', 'be', 'the', 'most', 'pro-equality', 'president', 'in', 'our', 'nation’s', 'history.', 'lgbtq+', 'rights', 'are', 'human', 'rightsand', 'we', "can't", 'rest', 'until', 'everyone', 'is', 'treated', 'with', 'dignity', 'and', 'respect', 'under', 'the', 'law.']
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO on
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO the
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO final
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO day
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO ofpridemonth,
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO here’s
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO my
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO promise
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO to
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO you:
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO if
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO i
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO have
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO the
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO honor
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO of
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO being
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO elected,
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO i
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO will
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO be
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO the
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO most
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO pro-equality
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO president
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO in
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO our
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO nation’s
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO history.
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO lgbtq+
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO rights
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO are
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO human
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO rightsand
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO we
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO can't
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO rest
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO until
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO everyone
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO is
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO treated
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO with
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO dignity
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO and
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO respect
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO under
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO the
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO law.
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:84} INFO ['final', 'day', 'ofpridemonth,', 'promise', 'you:', 'honor', 'elected,', 'pro-equality', 'president', 'nation’s', 'history.', 'lgbtq+', 'rights', 'human', 'rightsand', 'rest', 'treated', 'dignity', 'respect', 'law.']
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:75} INFO we’re facing a serious threatand we need to meet it together as one country. but this president gives us no direction and actively pits us against one another. we can't continue on like this
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:77} INFO ['we’re', 'facing', 'a', 'serious', 'threatand', 'we', 'need', 'to', 'meet', 'it', 'together', 'as', 'one', 'country.', 'but', 'this', 'president', 'gives', 'us', 'no', 'direction', 'and', 'actively', 'pits', 'us', 'against', 'one', 'another.', 'we', "can't", 'continue', 'on', 'like', 'this']
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO we’re
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO facing
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO a
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO serious
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO threatand
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO we
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO need
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO to
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO meet
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO it
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO together
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO as
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO one
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO country.
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO but
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO this
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO president
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO gives
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO us
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO no
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO direction
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO and
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO actively
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO pits
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO us
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO against
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO one
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO another.
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO we
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO can't
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO continue
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO on
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO like
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO this
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:84} INFO ['facing', 'threatand', 'meet', 'country.', 'president', 'direction', 'actively', 'pits', 'another.', 'continue']
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:75} INFO if i’m elected, i’ll immediately reach out to dr. fauci and ask him to continue his incredible service to our country. i’ll have the nation’s top medical experts and scientists ready to advise our response on day oneand i'll actually listen to them.
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:77} INFO ['if', 'i’m', 'elected,', 'i’ll', 'immediately', 'reach', 'out', 'to', 'dr.', 'fauci', 'and', 'ask', 'him', 'to', 'continue', 'his', 'incredible', 'service', 'to', 'our', 'country.', 'i’ll', 'have', 'the', 'nation’s', 'top', 'medical', 'experts', 'and', 'scientists', 'ready', 'to', 'advise', 'our', 'response', 'on', 'day', 'oneand', "i'll", 'actually', 'listen', 'to', 'them.']
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO if
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO i’m
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO elected,
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO i’ll
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO immediately
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO reach
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO out
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO to
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO dr.
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO fauci
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO and
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO ask
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO him
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO to
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO continue
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO his
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO incredible
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO service
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO to
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO our
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO country.
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO i’ll
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO have
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO the
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO nation’s
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO top
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO medical
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO experts
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO and
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO scientists
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO ready
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO to
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO advise
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO our
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO response
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO on
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO day
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO oneand
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO i'll
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO actually
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO listen
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO to
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:80} INFO them.
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:82} INFO found match!!!
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:84} INFO ['elected,', 'immediately', 'reach', 'dr.', 'fauci', 'continue', 'incredible', 'service', 'country.', 'nation’s', 'top', 'medical', 'experts', 'scientists', 'ready', 'advise', 'response', 'day', 'oneand', 'listen', 'them.']
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:75} INFO 
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:77} INFO []
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/tweet_parser.py:84} INFO []
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:37} INFO final day ofpridemonth, promise you: honor elected, pro-equality president nation’s history. lgbtq+ rights human rightsand rest treated dignity respect law.
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:42} INFO promise
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:42} INFO honor
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:42} INFO dignity
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:42} INFO respect
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/main.py:31} INFO 4
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:37} INFO facing threatand meet country. president direction actively pits another. continue
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/main.py:31} INFO 0
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:37} INFO elected, immediately reach dr. fauci continue incredible service country. nation’s top medical experts scientists ready advise response day oneand listen them.
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:42} INFO incredible
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:42} INFO top
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:42} INFO ready
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/main.py:31} INFO 3
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:37} INFO 
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:42} INFO 
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:45} INFO 
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/main.py:31} INFO 0
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:37} INFO 
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:42} INFO 
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/analyzer.py:45} INFO 
+07/05/2020 02:08:32 AM {/home/dhruval/PycharmProjects/Analysis/main.py:31} INFO 0
