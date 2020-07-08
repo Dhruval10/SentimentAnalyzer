@@ -242,6 +242,9 @@ inward
 is
 isn't
 it
+it!
+it,
+it?
 it'd
 it'll
 its
@@ -582,9 +585,4 @@ yourselves
 you've
 z
 zero
-.
-..
-...
-....
-!
-?
+…

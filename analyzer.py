@@ -53,12 +53,16 @@ class Analyzer(object):
             Returns:
                  positive negative or neutral based on the count value
 
+
+
              tweets = {
                 'positive' : [{"tweet": score},],
                 'negetive' : [],
                 'neutral' : []
              }
         """
+
+
         count = self.analyze_tweet(tweet)
         if count > 0:
             return 'positive'

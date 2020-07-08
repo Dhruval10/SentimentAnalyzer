@@ -4,7 +4,9 @@ import got3
 import re
 import logging
 import file_work
+import string
 from nltk.corpus import stopwords
+from langdetect import detect
 
 
 class TweetParser(object):
@@ -12,7 +14,7 @@ class TweetParser(object):
     def __init__(self):
         self.initializer = None
 
-    def set_tweet_criteria(self, since_date='2019-10-01', until_date='2020-07-01', handle=None, max_tweets=4000):
+    def set_tweet_criteria(self, since_date='2020-03-08', until_date='2020-07-01', handle=None, max_tweets=100):
         """This function will return all the tweets for specified handle between since_date and until_date.
 
         Args:
@@ -24,8 +26,11 @@ class TweetParser(object):
         Returns:
             This function will return tweetCriteria object for specified params.
         """
+        # return got3.manager.TweetCriteria().setSince(
+        #     since=since_date).setUntil(until=until_date).setUsername(username=handle).setMaxTweets(maxTweets=max_tweets)
+
         return got3.manager.TweetCriteria().setSince(
-            since=since_date).setUntil(until=until_date).setUsername(username=handle).setMaxTweets(maxTweets=max_tweets)
+                since=since_date).setUntil(until=until_date).setUsername(username=handle).setMaxTweets(maxTweets=max_tweets)
 
     def get_tweets(self, tweet_criteria=None):
         """This function will return all the tweets for given criteria.
@@ -54,13 +59,26 @@ class TweetParser(object):
         return processed_tweets
 
     def clean_tweet(self, tweet):
-        """TODO: Please specify function args here.
+        """This function will clean all the tweet. It will return clean tweet
+
+        Args:
+            tweet: tweet object will have one tweet
+
+        Return:
+            This function will return single clean tweet
         """
         # return ' '.join(re.sub('(@[A-Za-z0-9]+)|([^0-9A-Za-z \t]) |(\w+:\/\/\S+)| ((www\.[^\s]+) |(http?://[^\s]+)|(https?://[^\s]+)|(.pic.[^\s]+))', ' ', tweet.text).split())
-        return ' '.join(re.sub(r'(@[A-Za-z0-9]+) | ([^0-9A-Za-z \t]) |(pic.twitter\.[^\s]+)|((www\.[^\s]+) |(http?://[^\s]+) |(https?://[^\s]+)|(.pic.[^\s]+))', ' ', tweet.text).split())
+        return ' '.join(re.sub(r'(@[A-Za-z0-9]+) | ([^0-9A-Za-z \t]) |[^\w\s]|(pic.twitter\.[^\s]+)|((www\.[^\s]+) |(http?://[^\s]+) |(https?://[^\s]+)|(.pic.[^\s]+))', ' ', tweet.text).split())
 
     def remove_stopwords(self):
-        """TODO: enter comment and args here."""
+        """This function will remove all the stopwords present in the stopwords.txt file
+
+        Args:
+            No argument needed to pass. It will
+
+        Returns:
+            It will return filtered sentence which will not have any stopword in it
+        """
         # stop_words = set(stopwords.words('english'))
         stop_words_file = file_work.FileOperations('stopwords.txt')
         stop_words = stop_words_file.read()
