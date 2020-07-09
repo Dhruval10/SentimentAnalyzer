@@ -19,18 +19,10 @@ def main():
     new_tweet_file.write(processed_tweets)
     new_tweet_file.remove_blines()
     parser.remove_stopwords()
-    # nfile = file_work.FileOperations('nwords.txt')
-    # pfile = file_work.FileOperations('pwords.txt')
-
     analyze = analyzer.Analyzer()
-    sentiment = {}
-
     new_file = file_work.FileOperations('FilteredTweet.txt').read()
 
-    for tweet in new_file:
-        sentiment[tweet] = analyze.analyze_tweet(tweet)
-        logging.info(sentiment[tweet])
-        # analyzed_tweet.write(sentiment[tweet])
+    logging.info(analyze.posneg_write(new_file))
 
     # print(type(sentiment))
     # analyzed_tweet.write(sentiment)

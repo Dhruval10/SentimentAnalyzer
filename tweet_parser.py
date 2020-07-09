@@ -14,7 +14,7 @@ class TweetParser(object):
     def __init__(self):
         self.initializer = None
 
-    def set_tweet_criteria(self, since_date='2020-03-08', until_date='2020-07-01', handle=None, max_tweets=100):
+    def set_tweet_criteria(self, since_date='2020-03-08', until_date='2020-07-01', handle=None, max_tweets=10):
         """This function will return all the tweets for specified handle between since_date and until_date.
 
         Args:
@@ -80,7 +80,7 @@ class TweetParser(object):
             It will return filtered sentence which will not have any stopword in it
         """
         # stop_words = set(stopwords.words('english'))
-        stop_words_file = file_work.FileOperations('stopwords.txt')
+        stop_words_file = file_work.FileOperations('/home/dhruval/PycharmProjects/Analysis/Files/stopwords.txt')
         stop_words = stop_words_file.read()
         # logging.info(stop_words)
         new_tweet_file = file_work.FileOperations('New_tweets.txt')

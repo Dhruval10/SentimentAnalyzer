@@ -19,13 +19,13 @@ class Analyzer(object):
         ''' TODO: Write about pos_tweet
         This function wil
         '''
-        tweet1 = file_work.FileOperations('pwords.txt')
+        tweet1 = file_work.FileOperations('/home/dhruval/PycharmProjects/Analysis/Files/pwords.txt')
         pos = tweet1.read()
         return pos
 
     def neg_tweet(self):
         ''' TODO: Write about neg_tweet '''
-        tweet2 = file_work.FileOperations('nwords.txt')
+        tweet2 = file_work.FileOperations('/home/dhruval/PycharmProjects/Analysis/Files/nwords.txt')
         neg = tweet2.read()
         return neg
 
@@ -43,33 +43,49 @@ class Analyzer(object):
             if word in neg1:
                 count-=1
                 logging.info(word)
+        # tweets = {}
+        # tweets['Positive'] = []
+        # tweets['Negative'] = []
+        # tweets['Neutral'] = []
+        #
+        # if count > 0:
+        #     tweets['Positive'].append(tweet,count)
+        # elif count < 0:
+        #     tweets['Negative'].append(tweet,count)
+        # else:
+        #     tweets['Neutral'].append(tweet,count)
+        #
+        # logging.info(tweets['Positive'].append(tweet,count))
+        # logging.info(tweets['Negative'].append(tweet,count))
+        # logging.info(tweets['Neutral'].append(tweet,count))
+
         return count
 
-    def posneg_return(self, tweet):
+    def posneg_write(self, tweets):
         """TODO: Write about posneg_return
             This takes count as input from analyze_tweet
             Args:
                 Takes tweet as input
             Returns:
                  positive negative or neutral based on the count value
-
-
-
              tweets = {
                 'positive' : [{"tweet": score},],
                 'negetive' : [],
                 'neutral' : []
              }
         """
+        analyzed_tweet = {'positive':{}, 'negative': {}, 'neutral':{}}
 
+        for tweet in tweets:
+            polarity = self.analyze_tweet(tweet)
+            if polarity > 0:
+                analyzed_tweet['positive'][tweet] = polarity
+            elif polarity < 0:
+                analyzed_tweet['negative'][tweet] = polarity
+            else:
+                analyzed_tweet['neutral'][tweet] = 0
 
-        count = self.analyze_tweet(tweet)
-        if count > 0:
-            return 'positive'
-        elif count < 0:
-            return 'negative'
-        else:
-            return 'neutral'
+        return analyzed_tweet
 
     def nb_classifier(self):
         ''' TODO: Write about nb_classifier and what it returns '''
