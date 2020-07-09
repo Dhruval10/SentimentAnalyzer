@@ -8,7 +8,7 @@ class TweetManager:
 		pass
 		
 	@staticmethod
-	def getTweets(tweetCriteria, receiveBuffer=None, bufferLength=100, proxy=None):
+	def getTweets(tweetCriteria, receiveBuffer=None, bufferLength=30000, proxy=None):
 		refreshCursor = ''
 	
 		results = []
@@ -127,7 +127,7 @@ class TweetManager:
 		opener.addheaders = headers
 
 		try:
-			response = opener.open(url)
+			response = opener.open(url, timeout=500)
 			jsonResponse = response.read()
 		except:
 			#print("Twitter weird response. Try to see on browser: ", url)

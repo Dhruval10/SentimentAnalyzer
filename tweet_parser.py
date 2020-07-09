@@ -5,7 +5,7 @@ import re
 import logging
 import file_work
 import string
-from nltk.corpus import stopwords
+# from nltk.corpus import stopwords
 from langdetect import detect
 
 

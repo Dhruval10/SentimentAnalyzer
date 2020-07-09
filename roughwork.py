@@ -18,13 +18,17 @@ count = 100
 
 
 def main():
-    dict_obj = dict()
-    dict_obj.key = 'Positive'
-    dict_obj.key = 'Negative'
-    dict_obj.key = 'Zero'
+    # dict_obj = dict()
+    # dict_obj.key = 'Positive'
+    # dict_obj.key = 'Negative'
+    # dict_obj.key = 'Zero'
+    # dict_obj.values = '1'
+    # dict_obj.values = '2'
+    # dict_obj.values = '3'
 
+    dict.keys('Positive')
 
-
+    print(dict_obj)
 
 
 if __name__ == '__main__':
