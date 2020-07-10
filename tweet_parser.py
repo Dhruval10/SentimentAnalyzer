@@ -14,7 +14,7 @@ class TweetParser(object):
     def __init__(self):
         self.initializer = None
 
-    def set_tweet_criteria(self, since_date='2020-03-08', until_date='2020-07-01', handle=None, max_tweets=10):
+    def set_tweet_criteria(self, since_date='2020-03-08', until_date='2020-07-01', handle=None, max_tweets=10000):
         """This function will return all the tweets for specified handle between since_date and until_date.
 
         Args:
@@ -31,6 +31,24 @@ class TweetParser(object):
 
         return got3.manager.TweetCriteria().setSince(
                 since=since_date).setUntil(until=until_date).setUsername(username=handle).setMaxTweets(maxTweets=max_tweets)
+
+    def set_tweet_criteria_keyword(self, since_date='2020-03-08', until_date='2020-07-01', keyword=None, max_tweets=10000):
+        """This function will return all the tweets for specified handle between since_date and until_date.
+
+        Args:
+            since_date: Beginning of the time for parsing.
+            until_date: Last day parser will parse.
+            handle: Tweeter handle to parse the tweets.
+            max_tweets: Total Number of tweets you want.
+
+        Returns:
+            This function will return tweetCriteria object for specified params.
+        """
+        # return got3.manager.TweetCriteria().setSince(
+        #     since=since_date).setUntil(until=until_date).setUsername(username=handle).setMaxTweets(maxTweets=max_tweets)
+
+        return got3.manager.TweetCriteria().setSince(
+                since=since_date).setUntil(until=until_date).setQuerySearch(querySearch=keyword).setMaxTweets(maxTweets=max_tweets)
 
     def get_tweets(self, tweet_criteria=None):
         """This function will return all the tweets for given criteria.
@@ -54,7 +72,7 @@ class TweetParser(object):
         """
         processed_tweets = []
         for tweet in tweets:
-            logging.info(tweet.text)
+            #logging.info(tweet.text)
             processed_tweets.append(self.clean_tweet(tweet))
         return processed_tweets
 
@@ -83,16 +101,16 @@ class TweetParser(object):
         stop_words_file = file_work.FileOperations('/home/dhruval/PycharmProjects/Analysis/Files/stopwords.txt')
         stop_words = stop_words_file.read()
         # logging.info(stop_words)
-        new_tweet_file = file_work.FileOperations('New_tweets.txt')
+        new_tweet_file = file_work.FileOperations('tweets.txt')
         tweets = new_tweet_file.read()
         filtered_text_file = file_work.FileOperations('FilteredTweet.txt')
-        logging.info(tweets)
+        #logging.info(tweets)
         filtered_text = []
 
         for tweet in tweets:
             logging.info(tweet)
             words = tweet.split()
-            logging.info(words)
+            ##logging.info(words)
             word_list = []
             for word in words:
                 logging.info(word)

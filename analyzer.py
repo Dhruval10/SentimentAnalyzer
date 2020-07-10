@@ -7,6 +7,11 @@ import tweet_parser
 from textblob import TextBlob
 from wordcloud import WordCloud as wd
 from nltk import NaiveBayesClassifier
+from nltk.corpus import twitter_samples
+from nltk import classify
+import random
+from nltk.tag import pos_tag
+import json
 
 class Analyzer(object):
 
@@ -34,32 +39,17 @@ class Analyzer(object):
         pos1 = self.pos_tweet()
         neg1 = self.neg_tweet()
         count = 0
-        logging.info(tweet)
+        #logging.info(tweet)
+        sant = {}
         for word in str(tweet).split(' '):
             # logging.info(word)
             if word in pos1:
                 count+=1
-                logging.info(word)
+                sant[word] = 'positive'
             if word in neg1:
                 count-=1
-                logging.info(word)
-        # tweets = {}
-        # tweets['Positive'] = []
-        # tweets['Negative'] = []
-        # tweets['Neutral'] = []
-        #
-        # if count > 0:
-        #     tweets['Positive'].append(tweet,count)
-        # elif count < 0:
-        #     tweets['Negative'].append(tweet,count)
-        # else:
-        #     tweets['Neutral'].append(tweet,count)
-        #
-        # logging.info(tweets['Positive'].append(tweet,count))
-        # logging.info(tweets['Negative'].append(tweet,count))
-        # logging.info(tweets['Neutral'].append(tweet,count))
-
-        return count
+                sant[word] = 'negative'
+        return sant, count
 
     def posneg_write(self, tweets):
         """TODO: Write about posneg_return
@@ -69,28 +59,41 @@ class Analyzer(object):
             Returns:
                  positive negative or neutral based on the count value
              tweets = {
-                'positive' : [{"tweet": score},],
+                'positive' : ["tweet"],
                 'negetive' : [],
                 'neutral' : []
              }
         """
-        analyzed_tweet = {'positive':{}, 'negative': {}, 'neutral':{}}
+        analyzed_tweet = {'positive':[], 'negative': [], 'neutral':[]}
 
         for tweet in tweets:
-            polarity = self.analyze_tweet(tweet)
+            sant, polarity = self.analyze_tweet(tweet)
             if polarity > 0:
-                analyzed_tweet['positive'][tweet] = polarity
+                analyzed_tweet['positive'].append(sant)
             elif polarity < 0:
-                analyzed_tweet['negative'][tweet] = polarity
+                analyzed_tweet['negative'].append(sant)
             else:
-                analyzed_tweet['neutral'][tweet] = 0
-
+                analyzed_tweet['neutral'].append(sant)
+        # logging.info(" Printing "+analyzed_tweet)
         return analyzed_tweet
 
     def nb_classifier(self):
         ''' TODO: Write about nb_classifier and what it returns '''
-        analyzed_tweet = file_work.FileOperations('analyzed.txt').read()
-        classifier = NaiveBayesClassifier.train(analyzed_tweet)
+        analyzed_tweet = json.loads(file_work.FileOperations('analyzed.txt').read()[0])
+        logging.info(analyzed_tweet)
+        positive_tweets = [(tweet, 'Positive') for tweet in analyzed_tweet['positive']]
+        negative_tweets = [(tweet, 'Negative') for tweet in analyzed_tweet['negative']]
+        data_set = positive_tweets +negative_tweets
+        random.shuffle(data_set)
+        size = len(data_set)
+        train_data = data_set[int(size*0.8):]
+        test_data = data_set[:int(size*0.2)]
+        logging.info(data_set)
+        logging.info(train_data)
+        logging.info(test_data)
+        classifier = NaiveBayesClassifier.train(train_data)
+        print('Accuracy is:', classify.accuracy(classifier, test_data))
+        logging.info(classifier.show_most_informative_features(10))
         return classifier
 
     def get_tweet_polarity(self,tweet):
