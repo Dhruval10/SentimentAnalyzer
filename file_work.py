@@ -11,7 +11,7 @@ class FileOperations():
         Args:
             text_to_write: write provided list to file.
         """
-        file = open(self._file_name, 'w')
+        file = open(self._file_name, 'a')
         for test_string in text_to_write:
             file.writelines(test_string.lower()+'\n')
         file.close()

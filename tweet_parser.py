@@ -32,7 +32,7 @@ class TweetParser(object):
         return got3.manager.TweetCriteria().setSince(
                 since=since_date).setUntil(until=until_date).setUsername(username=handle).setMaxTweets(maxTweets=max_tweets)
 
-    def set_tweet_criteria_keyword(self, since_date='2020-03-08', until_date='2020-07-01', keyword=None, max_tweets=10000):
+    def set_tweet_criteria_keyword(self, since_date='2020-03-08', until_date='2020-07-01', keyword=None, max_tweets=2000):
         """This function will return all the tweets for specified handle between since_date and until_date.
 
         Args:
@@ -113,9 +113,9 @@ class TweetParser(object):
             ##logging.info(words)
             word_list = []
             for word in words:
-                logging.info(word)
+               # logging.info(word)
                 if word not in stop_words:
-                    logging.info('found match!!!')
+                #    logging.info('found match!!!')
                     word_list.append(word)
             logging.info(word_list)
             filtered_text.append(' '.join(word_list))
