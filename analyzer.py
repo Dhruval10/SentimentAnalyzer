@@ -20,6 +20,7 @@ from nltk import FreqDist, classify, NaiveBayesClassifier
 
 import re, string, random
 
+
 class Analyzer(object):
 
     def __init__(self):
@@ -85,7 +86,7 @@ class Analyzer(object):
         return analyzed_tweet
 
     def convert_to_trainable_dataset(self):
-        '''TODO'''
+        '''TODO: Write about convert_to_trainable_dataset()'''
         analyzed_tweet = json.loads(file_work.FileOperations('analyzed.txt').read()[0])
         logging.info(analyzed_tweet)
         positive_tweets = [(tweet, 'Positive') for tweet in analyzed_tweet['positive']]
@@ -105,7 +106,7 @@ class Analyzer(object):
         return classifier
 
     def test_classifier(self, classifier, test_data):
-        ''''''
+        '''TODO'''
         return classify.accuracy(classifier, test_data)
 
     def get_tweet_polarity(self,tweet):

@@ -3,6 +3,7 @@ import tweet_parser
 import file_work
 import logging
 import json
+import pickle
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.corpus import twitter_samples, stopwords
 from nltk.tag import pos_tag
@@ -58,13 +59,13 @@ def main():
     train_data = dataset[:7000]
     test_data = dataset[7000:]
 
-    # classifier = NaiveBayesClassifier.train(train_data)
-    #
-    # print("Accuracy is:", classify.accuracy(classifier, test_data))
-    #
-    # print(classifier.show_most_informative_features(10))
+    classifier = NaiveBayesClassifier.train(train_data)
 
-    custom_tweet = "I am very depressed."
+    print("Accuracy is:", classify.accuracy(classifier, test_data))
+
+    print(classifier.show_most_informative_features(10))
+
+    custom_tweet = "I am very depressed with Trump and what he said."
 
     custom_tokens = analyze.remove_noise(word_tokenize(custom_tweet), stop_words)
 
@@ -92,13 +93,16 @@ def main():
     analysis = file_work.FileOperations('analyzed.txt').write([json.dumps(analyze.posneg_write(new_file))])
 
     my_classifier = analyze.nb_classifier(my_train_data, my_test_data)
-    print('My clasifier accuracy: ', analyze.test_classifier(my_classifier, my_test_data))
+    print('My classifier accuracy: ', analyze.test_classifier(my_classifier, my_test_data))
     print(my_classifier.show_most_informative_features(10))
-    # print('clasifier accuracy: ', analyze.test_classifier(classifier, my_test_data))
+    print('classifier accuracy: ', analyze.test_classifier(classifier, my_test_data))
 
     print(custom_tweet, my_classifier.classify(dict([token, True] for token in custom_tokens)))
-    #logging.info(classifier.classify(my_test_data[:40]))
-#    logging.info(my_classifier.classify(my_test_data[:40]))
+    # pickel_file = 'trainedModel.pkl'
+    # with open(pickel_file, 'wb') as file:
+    #pickle.dump(my_classifier,open('trainedModel.pkl','wb'))
+    # logging.info(classifier.classify(my_test_data[:40]))
+    # logging.info(my_classifier.classify(my_test_data[:40]))
 
 
 if __name__ == '__main__':
