@@ -2,20 +2,20 @@
 
 import file_work
 import logging
-import nltk
+# import nltk
 import tweet_parser
 from textblob import TextBlob
-from wordcloud import WordCloud as wd
-from nltk import NaiveBayesClassifier
-from nltk.corpus import twitter_samples
-from nltk import classify
-import random
-from nltk.tag import pos_tag
+# from wordcloud import WordCloud as wd
+# from nltk import NaiveBayesClassifier
+# from nltk.corpus import twitter_samples
+# from nltk import classify
+# import random
+# from nltk.tag import pos_tag
 import json
 from nltk.stem.wordnet import WordNetLemmatizer
-from nltk.corpus import twitter_samples, stopwords
+# from nltk.corpus import twitter_samples, stopwords
 from nltk.tag import pos_tag
-from nltk.tokenize import word_tokenize
+# from nltk.tokenize import word_tokenize
 from nltk import FreqDist, classify, NaiveBayesClassifier
 
 import re, string, random

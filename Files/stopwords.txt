@@ -373,6 +373,7 @@ r
 rather
 rd
 re
+retweeted
 really
 reasonably
 regarding
