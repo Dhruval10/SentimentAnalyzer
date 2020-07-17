@@ -1,12 +1,11 @@
 """Parse all the tweets using got3 api"""
 
-import got3
-import re
 import logging
+import re
 import file_work
+import got3
 # import string
 # from nltk.corpus import stopwords
-from langdetect import detect
 
 
 class TweetParser(object):
@@ -14,7 +13,7 @@ class TweetParser(object):
     def __init__(self):
         self.initializer = None
 
-    def set_tweet_criteria(self, since_date='2015-10-08', until_date='2016-11-08', handle=None, max_tweets=10000):
+    def set_tweet_criteria(self, since_date='2019-08-01', until_date='2020-07-15', handle=None, max_tweets = 5000):
         """This function will return all the tweets for specified handle between since_date and until_date.
 
         Args:
@@ -32,7 +31,7 @@ class TweetParser(object):
         return got3.manager.TweetCriteria().setSince(
                 since=since_date).setUntil(until=until_date).setUsername(username=handle).setMaxTweets(maxTweets=max_tweets)
 
-    def set_tweet_criteria_keyword(self, since_date='2015-10-08', until_date='2016-11-08', keyword=None, max_tweets=10000):
+    def set_tweet_criteria_keyword(self, since_date='2015-10-08', until_date='2016-11-08', keyword = None, max_tweets = 10):
         """This function will return all the tweets for specified handle between since_date and until_date.
 
         Args:

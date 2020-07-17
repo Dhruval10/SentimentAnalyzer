@@ -1,24 +1,27 @@
 """Analyzer can analyze provided dataset and return positive, negative and neutral based on tweets."""
 
-import file_work
-import logging
-# import nltk
-import tweet_parser
-from textblob import TextBlob
-# from wordcloud import WordCloud as wd
-# from nltk import NaiveBayesClassifier
-# from nltk.corpus import twitter_samples
-# from nltk import classify
+from wordcloud import WordCloud as wd
+from nltk.corpus import twitter_samples
+from nltk import classify
+import pandas as pd
 # import random
 # from nltk.tag import pos_tag
 import json
+import logging
+import random
+import re
+import string
+from nltk.tag import pos_tag
+from textblob import TextBlob
+import file_work
+import tweet_parser
+
+from nltk import classify, NaiveBayesClassifier
 from nltk.stem.wordnet import WordNetLemmatizer
 # from nltk.corpus import twitter_samples, stopwords
-from nltk.tag import pos_tag
+# import matplotlib.pyplot as plt
 # from nltk.tokenize import word_tokenize
-from nltk import FreqDist, classify, NaiveBayesClassifier
-
-import re, string, random
+# import nltk
 
 
 class Analyzer(object):
@@ -42,7 +45,7 @@ class Analyzer(object):
         neg = tweet2.read()
         return neg
 
-    def analyze_tweet(self, tweet):
+    def analyze_tweet(self, tweet):#
         ''' TODO: Write about assign_sentiment'''
         pos1 = self.pos_tweet()
         neg1 = self.neg_tweet()
@@ -72,7 +75,7 @@ class Analyzer(object):
                 'neutral' : []
              }
         """
-        analyzed_tweet = {'positive':[], 'negative': [], 'neutral':[]}
+        analyzed_tweet = {'positive': [], 'negative': [], 'neutral': []}
 
         for tweet in tweets:
             sant, polarity = self.analyze_tweet(tweet)
@@ -87,7 +90,7 @@ class Analyzer(object):
 
     def convert_to_trainable_dataset(self):
         '''TODO: Write about convert_to_trainable_dataset()'''
-        analyzed_tweet = json.loads(file_work.FileOperations('analyzed.txt').read()[0])
+        analyzed_tweet = json.loads(file_work.FileOperations('Files/analyzed.txt').read()[0])
         logging.info(analyzed_tweet)
         positive_tweets = [(tweet, 'Positive') for tweet in analyzed_tweet['positive']]
         negative_tweets = [(tweet, 'Negative') for tweet in analyzed_tweet['negative']]
@@ -102,7 +105,7 @@ class Analyzer(object):
         ''' TODO: Write about nb_classifier and what it returns '''
         classifier = NaiveBayesClassifier.train(train_data)
         print('Accuracy is:', classify.accuracy(classifier, test_data))
-        logging.info(classifier.show_most_informative_features(10))
+        # logging.info(classifier.show_most_informative_features(10))
         return classifier
 
     def test_classifier(self, classifier, test_data):
@@ -115,7 +118,7 @@ class Analyzer(object):
         return analysis
 
     def get_tweet_sentiment(self,tweet):
-        ''' ToDO: Write about get_tweet_sentiment '''
+        ''' TODO: Write about get_tweet_sentiment '''
         analysis = TextBlob(tweet_parser.TweetParser.clean_tweet(tweet)).sentiment.subjectivity
         return analysis
 
@@ -150,3 +153,13 @@ class Analyzer(object):
     def get_tweets_for_model(self, cleaned_tokens_list):
         for tweet_tokens in cleaned_tokens_list:
             yield dict([token, True] for token in tweet_tokens)
+
+    # def create_chart(self):
+    #     analyzed_tweet = json.loads(file_work.FileOperations('Files/analyzed.txt').read()[0])
+    #     logging.info(analyzed_tweet)
+    #     positive_tweets = [(tweet, 'Positive') for tweet in analyzed_tweet['positive']]
+    #     negative_tweets = [(tweet, 'Negative') for tweet in analyzed_tweet['negative']]
+    #
+    #     df = pd.DataFrame({'Positive Tweets': positive_tweets, 'Negative Tweets': negative_tweets})
+    #
+    #     print(df)
