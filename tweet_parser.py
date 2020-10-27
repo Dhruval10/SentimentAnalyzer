@@ -27,7 +27,7 @@ class TweetParser(object):
             This function will return tweetCriteria object for specified params.
         """
         # return got3.manager.TweetCriteria().setSince(
-        #     since=since_date).setUntil(until=until_date).setUsername(username=handle).setMaxTweets(maxTweets=max_tweets)
+#              since=since_date).setUntil(until=until_date).setUsername(username=handle).setMaxTweets(maxTweets=max_tweets)
 
         return got3.manager.TweetCriteria().setSince(
                 since=since_date).setUntil(until=until_date).setUsername(username=handle).setMaxTweets(maxTweets=max_tweets)
