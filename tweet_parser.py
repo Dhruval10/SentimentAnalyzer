@@ -124,3 +124,4 @@ class TweetParser(object):
     def print(self):
         """This function prints local variables."""
         print(self.initializer)
+        
