@@ -8,7 +8,6 @@ import string
 # from nltk.corpus import stopwords
 from langdetect import detect
 
-
 class TweetParser(object):
 
     def __init__(self):
